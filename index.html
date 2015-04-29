@@ -8,11 +8,8 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/katex.min.css">
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-    </script>
     <script type="text/javascript" src="javascripts/katex.min.js"></script>
+    <script type="text/javascript" src="javascripts/auto-render.js"></script>
 
     <title>Lattice Formation With Control</title>
   </head>
@@ -34,6 +31,18 @@
         </header>
     </div>
 
+    <div id="test">
+      This is some text $math \frac12$ other text $\unsupported$
+      <span class="blue">
+        Other node \[ displaymath \frac{1}{2} \] blah $$ \int_2^3 $$
+      </span>
+      and some <!-- comment --> more text \(and math\) blah. And $math with a
+      \$ sign$.
+      <pre>
+        Stuff in a $pre tag$
+      </pre>
+    </div>
+
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
@@ -49,8 +58,20 @@
         <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-
     
+    <script>
+      renderMathInElement(
+          document.getElementById("test"),
+          {
+              delimiters: [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "\\[", right: "\\]", display: true},
+                  {left: "$", right: "$", display: false},
+                  {left: "\\(", right: "\\)", display: false}
+              ]
+          }
+      );
+    </script>
 
   </body>
 </html>
