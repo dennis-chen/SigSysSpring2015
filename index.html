@@ -1,36 +1,23 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Lattice Formation With Control : Getting speakers to make annoying sounds">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/katex.min.css">
-    <script type="text/javascript" src="javascripts/katex.min.js"></script>
-    <script type="text/javascript" src="javascripts/auto-render.min.js"></script>
-
-    <title>Lattice Formation With Control</title>
+    <meta charset="UTF-8">
+    <title>Auto-render test</title>
+    <script src="/javascripts/katex.min.js" type="text/javascript"></script>
+    <link href="/stylesheets/katex.min.css" rel="stylesheet" type="text/css">
+    <script src="/javascripts/auto-render.min.js" type="text/javascript"></script>
+    <style type="text/css">
+      body {
+          margin: 0px;
+          padding: 0px;
+          font-size: 36px;
+      }
+      #test > .blue {
+          color: blue;
+      }
+    </style>
   </head>
-
   <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/dennis-chen/SigSysSpring2015">View on GitHub</a>
-
-          <h1 id="project_title">Lattice Formation With Control</h1>
-          <h2 id="project_tagline">Getting speakers to make annoying sounds</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/dennis-chen/SigSysSpring2015/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/dennis-chen/SigSysSpring2015/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
     <div id="test">
       This is some text $math \frac12$ other text $\unsupported$
       <span class="blue">
@@ -42,25 +29,7 @@
         Stuff in a $pre tag$
       </pre>
     </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-          When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
-          $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Lattice Formation With Control maintained by <a href="https://github.com/dennis-chen">dennis-chen</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-    
     <script>
-      console.log('hello');
       renderMathInElement(
           document.getElementById("test"),
           {
@@ -73,6 +42,5 @@
           }
       );
     </script>
-
- </body>
+  </body>
 </html>
